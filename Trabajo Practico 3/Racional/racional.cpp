@@ -19,17 +19,17 @@ racional::racional(int n, int d){
     else error=1; // Devuelve cero en caso de que no exista
 }
 
-// Le asigna al num el valor de n
+// Carga el valor del numerador
 void racional::setNum(int n){
     num=n;
 }
 
-// Carga el valor del num a la clase
+// Muestra el valor del numerador
 int racional::getNum(){
     return num;
 }
 
-// Le asigna al num el valor de n
+// Carga el valor del denominador
 void racional::setDen(int d){
     den=d;
     // Revisa que el denominador sea distinto de cero
@@ -37,36 +37,36 @@ void racional::setDen(int d){
     else error=1;
 }
 
-// Carga el valor del den a la clase
+// Muestra el valor del denominador
 int racional::getDen(){
     return den;
 }
 
-// Carga el valor del error a la clase
+// Muestra el valor del error
 int racional::getError(){
     return error;
 }
 
-// Incrementa el valor del numerador y del denominador; Y simplifica
+// Incrementa en uno el valor del numerador y del denominador; Y simplifica
 void racional::incrementar(){
     num+=den;
     simplificar();
 }
 
-// Decrementa el valor del numerador y del denominador; Y simplifica
+// Decrementa en uno el valor del numerador y del denominador; Y simplifica
 void racional::decrementar(){
     num-=den;
     simplificar();
 }
 
-// Suma dos numeros racionales
+// Calcula la suma de dos numeros racionales generando otro como resultado
 racional racional::sumar(racional x){
     racional z(num*x.den+den*x.num, den*x.den); // Suma los racionales: a/b + c/d = (a*d + b*c) / b*d
     z.simplificar(); // Simplifica el racional
     return z; // Devuelve la suma simplificada
 }
 
-// Suma dos numeros racionales
+// Calcula la resta de dos numeros racionales generando otro como resultado
 racional racional::restar(racional x){
     racional z(num*x.den-den*x.num, den*x.den); // Resta los racionales: a/b - c/d = (a*d - b*c) / b*d
     z.simplificar(); // Simplifica el racional
@@ -81,7 +81,7 @@ void racional::simplificar(){
     den/=d;
 }
 
-// Calculo del MCD entre el numerador y el denominador
+// Calcula la fraccion simplificada
 int racional::MCD(){
     int a,b,aux,r;
     a=num;
