@@ -5,7 +5,7 @@ using namespace std; // Define el contexto en el que las variables estan definid
 
 
 int main() {
-    int d, m, a, ig=0;
+    int d, m, a;
     Fecha f1(1,1, 2010) ; // Setea el valor minimo a f1
     Fecha f2(31,12, 2010) ; // Setea el valor maximo a f2
     Fecha f3, f4; // Agregamos 2 variables que mas adelante van a ser utilizadas para calculos
