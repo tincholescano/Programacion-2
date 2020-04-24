@@ -15,16 +15,16 @@ class racional{
     // Definicion de constructores
     racional(); // Se cargan valores predeterminados para num, den y error
     racional(int, int); // Se le pasan los parametros num y den para corroborar que no den error
-    racional sumar(racional); // Suma dos numeros racionales
-    racional restar(racional); // Resta dos numeros racionales
+    racional sumar(racional); // Calcula la suma de 2 racionales generando otro como resultado
+    racional restar(racional); // Calcula la resta de 2 racionales generando otro como resultado
 
     // Definicion de funciones
-    void setNum(int); // Funcion setter del numerador
-    int getNum(); // Funcion getter del numerador
-    void setDen(int); // Funcion setter del denominador
-    int getDen(); // Funcion getter del denominador
-    int getError(); // Funcion getter de error
-    void incrementar(); // Funcion para incrementar un numero racional y simplificar si es posible
-    void decrementar(); // Funcion para decrementar un numero racional y simplificar si es posible
-    void simplificar(); // Funcion para simplificar el numero racional
+    void setNum(int); // Carga del numerador
+    int getNum(); // Muestra del numerador
+    void setDen(int); // Carga del denominador
+    int getDen(); // Muestra del denominador
+    int getError(); // Muestra de error
+    void incrementar(); // Incrementar en uno un racional y simplificar si es posible
+    void decrementar(); // Decrementar en uno un racional y simplificar si es posible
+    void simplificar(); // Calcula la fraccion simplificada
 };
